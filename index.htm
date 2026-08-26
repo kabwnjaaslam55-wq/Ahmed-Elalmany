@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>الرعد ⚡ | أحمد الألماني - AHMED ELALMANY</title>
+
+  <meta name="title" content="الرعد ⚡ | أحمد الألماني - AHMED ELALMANY">
+  <meta name="description" content="الموقع الرسمي للفنان أحمد الألماني - الرعد ⚡ من الدلنجات، البحيرة. استمع لأحدث الأغاني والإصدارات.">
+  <meta name="theme-color" content="#07080c">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #07080c;
+      --bg-card: rgba(18, 22, 34, 0.75);
+      --bg-card-hover: rgba(28, 34, 52, 0.9);
+
+      --primary-gold: #fbbf24;
+      --gold-neon: #ffd700;
+      --gold-glow: rgba(251, 191, 36, 0.35);
+
+      --thunder-blue: #00d2ff;
+
+      --text-white: #f8fafc;
+      --text-gray: #94a3b8;
+
+      --border-gold: rgba(251, 191, 36, 0.22);
+
+      --font-main: 'Tajawal', 'Cairo', sans-serif;
+
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-white);
+      font-family: var(--font-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    ::selection {
+      background: var(--primary-gold);
+      color: #000;
+    }
+
+    /* =========================
+       BACKGROUND
+    ========================= */
+
+    #lightningCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+
+    .ambient-glow {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(80px);
+      animation: pulseGlow 10s infinite alternate ease-in-out;
+    }
+
+    .ambient-glow-1 {
+      top: -150px;
+      right: -150px;
+      background:
+        radial-gradient(
+          circle,
+          rgba(251, 191, 36, 0.08) 0%,
+          rgba(0, 210, 255, 0.04) 50%,
+          transparent 70%
+        );
+    }
+
+    .ambient-glow-2 {
+      bottom: 5%;
+      left: -180px;
+      background:
+        radial-gradient(
+          circle,
+          rgba(0, 210, 255, 0.08) 0%,
+          transparent 70%
+        );
+    }
+
+    @keyframes pulseGlow {
+      from {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+
+      to {
+        transform: scale(1.2) translate(30px, 30px);
+        opacity: 0.9;
+      }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      background: rgba(7, 8, 12, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-container {
+      height: 80px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      text-decoration: none;
+      color: var(--text-white);
+    }
+
+    .brand-logo img {
+      width: 48px;
+      height: 48px;
+
+      border-radius: 50%;
+      object-fit: cover;
+
+      border: 2px solid var(--primary-gold);
+
+      box-shadow:
+        0 0 15px var(--gold-glow);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff 0%,
+          var(--primary-gold) 100%
+        );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      color: var(--text-gray);
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-gray);
+      text-decoration: none;
+
+      font-weight: 700;
+      font-size: 1rem;
+
+      position: relative;
+
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary-gold);
+    }
+
+    .nav-links a::after {
+      content: "";
+
+      position: absolute;
+
+      right: 0;
+      bottom: -5px;
+
+      width: 0;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--primary-gold),
+          var(--thunder-blue)
+        );
+
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+
+      background: transparent;
+      border: none;
+
+      color: white;
+
+      font-size: 1.5rem;
+
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding-top: 110px;
+      padding-bottom: 60px;
+
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 4rem;
+
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+
+      gap: 1.5rem;
+    }
+
+    .badge-tag {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 6px 16px;
+
+      width: fit-content;
+
+      border-radius: 50px;
+
+      color: var(--primary-gold);
+
+      background: rgba(251,191,36,0.1);
+
+      border: 1px solid var(--border-gold);
+
+      font-weight: 700;
+
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-title {
+      font-size: 4rem;
+
+      font-weight: 900;
+
+      line-height: 1.1;
+    }
+
+    .hero-title .gold {
+      background:
+        linear-gradient(
+          135deg,
+          #fff 0%,
+          var(--primary-gold) 60%,
+          #f59e0b 100%
+        );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title .blue {
+      color: var(--thunder-blue);
+
+      text-shadow:
+        0 0 20px rgba(0,210,255,0.5);
+    }
+
+    .hero-subtext {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .hero-description {
+      color: var(--text-gray);
+
+      font-size: 1.1rem;
+
+      max-width: 540px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+
+      flex-wrap: wrap;
+
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      padding: 14px 32px;
+
+      border-radius: 50px;
+
+      border: none;
+
+      font-family: inherit;
+
+      font-size: 1rem;
+
+      font-weight: 800;
+
+      text-decoration: none;
+
+      cursor: pointer;
+
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary-gold),
+          #d97706
+        );
+
+      color: #000;
+
+      box-shadow:
+        0 0 25px var(--gold-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 0 35px rgba(251,191,36,0.6);
+    }
+
+    .btn-secondary {
+      color: white;
+
+      background: rgba(255,255,255,0.05);
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      color: var(--primary-gold);
+
+      border-color: var(--primary-gold);
+
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
+
+    .hero-image-wrapper {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-card {
+      position: relative;
+
+      width: 100%;
+      max-width: 440px;
+
+      padding: 12px;
+
+      border-radius: 30px;
+
+      background: rgba(255,255,255,0.03);
+
+      border: 1px solid var(--border-gold);
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.8),
+        0 0 40px var(--gold-glow);
+
+      backdrop-filter: blur(10px);
+    }
+
+    .artist-img {
+      width: 100%;
+      height: 520px;
+
+      display: block;
+
+      object-fit: cover;
+      object-position: top center;
+
+      border-radius: 20px;
+    }
+
+    .logo-badge {
+      position: absolute;
+
+      bottom: -20px;
+      right: -20px;
+
+      width: 110px;
+      height: 110px;
+
+      padding: 6px;
+
+      border-radius: 50%;
+
+      background: #000;
+
+      border: 2px solid var(--primary-gold);
+
+      box-shadow:
+        0 0 25px var(--gold-glow);
+
+      animation: rotateLogo 20s linear infinite;
+    }
+
+    .logo-badge img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+    }
+
+    @keyframes rotateLogo {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    .section {
+      padding: 100px 0;
+
+      position: relative;
+    }
+
+    .section-header {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      text-align: center;
+
+      gap: 12px;
+
+      margin-bottom: 3.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--primary-gold);
+
+      font-size: 1rem;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+    }
+
+    .section-title {
+      font-size: 2.75rem;
+
+      font-weight: 900;
+
+      line-height: 1.2;
+    }
+
+    .section-divider {
+      width: 80px;
+      height: 4px;
+
+      border-radius: 5px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--primary-gold),
+          var(--thunder-blue)
+        );
+    }
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-box-wrapper {
+      max-width: 600px;
+
+      margin: -1.5rem auto 3.5rem;
+    }
+
+    .search-box {
+      display: flex;
+
+      align-items: center;
+
+      padding: 6px 20px;
+
+      border-radius: 50px;
+
+      background: rgba(20,24,38,0.8);
+
+      border: 1px solid var(--border-gold);
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.4);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .search-box i {
+      color: var(--primary-gold);
+
+      margin-left: 12px;
+    }
+
+    .search-box input {
+      width: 100%;
+
+      background: transparent;
+
+      border: none;
+      outline: none;
+
+      color: white;
+
+      font-family: inherit;
+
+      font-size: 1rem;
+
+      padding: 10px 0;
+    }
+
+    /* =========================
+       SONGS
+    ========================= */
+
+    .songs-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fill, minmax(340px, 1fr));
+
+      gap: 2rem;
+    }
+
+    .song-card {
+      background: var(--bg-card);
+
+      border: 1px solid var(--border-gold);
+
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      backdrop-filter: blur(12px);
+
+      transition: var(--transition);
+
+      display: flex;
+
+      flex-direction: column;
+    }
+
+    .song-card:hover {
+      transform: translateY(-8px);
+
+      background: var(--bg-card-hover);
+
+      box-shadow:
+        0 20px 40px rgba(0,0,0,0.6),
+        0 0 25px rgba(251,191,36,0.2);
+    }
+
+    .song-cover-wrapper {
+      position: relative;
+
+      width: 100%;
+
+      padding-top: 56.25%;
+
+      overflow: hidden;
+
+      background: #000;
+    }
+
+    .song-cover-wrapper img {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: var(--transition);
+    }
+
+    .song-card:hover
+    .song-cover-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .song-badge-date {
+      position: absolute;
+
+      top: 12px;
+      right: 12px;
+
+      z-index: 3;
+
+      padding: 4px 12px;
+
+      border-radius: 20px;
+
+      background: rgba(7,8,12,0.85);
+
+      color: var(--primary-gold);
+
+      border: 1px solid var(--border-gold);
+
+      font-size: 0.8rem;
+
+      font-weight: 800;
+    }
+
+    .song-details {
+      padding: 1.5rem;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 0.8rem;
+
+      flex-grow: 1;
+    }
+
+    .song-title {
+      font-size: 1.35rem;
+
+      font-weight: 900;
+    }
+
+    .song-description {
+      color: var(--text-gray);
+
+      font-size: 0.95rem;
+
+      line-height: 1.6;
+    }
+
+    .song-player-container {
+      margin-top: 0.5rem;
+
+      position: relative;
+
+      padding-top: 56.25%;
+
+      background: #000;
+
+      border-radius: 12px;
+
+      overflow: hidden;
+
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .song-player-container iframe {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      border: none;
+    }
+
+    .song-actions {
+      display: flex;
+
+      margin-top: auto;
+
+      padding-top: 1rem;
+    }
+
+    .btn-watch {
+      width: 100%;
+
+      padding: 11px;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(251,191,36,0.2),
+          rgba(251,191,36,0.05)
+        );
+
+      color: var(--primary-gold);
+
+      border: 1px solid var(--border-gold);
+
+      font-family: inherit;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition: var(--transition);
+    }
+
+    .btn-watch:hover {
+      background: var(--primary-gold);
+
+      color: #000;
+
+      box-shadow:
+        0 0 15px var(--gold-glow);
+    }
+
+    .no-results {
+      grid-column: 1 / -1;
+
+      text-align: center;
+
+      padding: 4rem;
+
+      color: var(--text-gray);
+    }
+
+    .loading {
+      grid-column: 1 / -1;
+
+      text-align: center;
+
+      padding: 4rem;
+
+      color: var(--primary-gold);
+
+      font-size: 1.2rem;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-card {
+      background: var(--bg-card);
+
+      border: 1px solid var(--border-gold);
+
+      border-radius: 32px;
+
+      padding: 3.5rem 2.5rem;
+
+      backdrop-filter: blur(16px);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 320px 1fr;
+
+      gap: 3.5rem;
+
+      align-items: center;
+    }
+
+    .about-img-frame {
+      overflow: hidden;
+
+      border-radius: 24px;
+
+      border: 2px solid var(--primary-gold);
+
+      box-shadow:
+        0 0 30px var(--gold-glow);
+    }
+
+    .about-img-frame img {
+      width: 100%;
+
+      height: 380px;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+    .about-content-col {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 1.5rem;
+    }
+
+    .about-text {
+      font-size: 1.2rem;
+
+      line-height: 1.9;
+
+      color: #e2e8f0;
+
+      font-weight: 500;
+    }
+
+    .stats-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 1.5rem;
+
+      margin-top: 1rem;
+    }
+
+    .stat-item {
+      text-align: center;
+
+      padding: 1.2rem;
+
+      border-radius: 16px;
+
+      background: rgba(255,255,255,0.03);
+
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat-value {
+      display: block;
+
+      color: var(--primary-gold);
+
+      font-size: 1.7rem;
+
+      font-weight: 900;
+    }
+
+    .stat-label {
+      color: var(--text-gray);
+
+      font-size: 0.85rem;
+
+      font-weight: 700;
+    }
+
+    /* =========================
+       SOCIAL
+    ========================= */
+
+    .social-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+
+      gap: 1.5rem;
+    }
+
+    .social-card {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 1rem;
+
+      padding: 2rem 1.5rem;
+
+      border-radius: 20px;
+
+      text-decoration: none;
+
+      color: white;
+
+      background: var(--bg-card);
+
+      border: 1px solid rgba(255,255,255,0.1);
+
+      backdrop-filter: blur(12px);
+
+      transition: var(--transition);
+    }
+
+    .social-card:hover {
+      transform: translateY(-8px);
+
+      border-color: var(--primary-gold);
+
+      box-shadow:
+        0 15px 30px rgba(0,0,0,0.6),
+        0 0 20px var(--gold-glow);
+    }
+
+    .social-card i {
+      font-size: 3rem;
+
+      transition: var(--transition);
+    }
+
+    .social-card:hover i {
+      transform: scale(1.15);
+    }
+
+    .tiktok i {
+      color: #ff0050;
+    }
+
+    .youtube i {
+      color: #ff0000;
+    }
+
+    .instagram i {
+      color: #e1306c;
+    }
+
+    .facebook i {
+      color: #1877f2;
+    }
+
+    .platform {
+      font-size: 1.2rem;
+
+      font-weight: 900;
+    }
+
+    .handle {
+      color: var(--text-gray);
+
+      font-size: 0.85rem;
+    }
+
+    /* =========================
+       VIDEO MODAL
+    ========================= */
+
+    .modal-overlay {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 3000;
+
+      display: none;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 1.5rem;
+
+      background: rgba(0,0,0,0.88);
+
+      backdrop-filter: blur(16px);
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .video-modal-card {
+      position: relative;
+
+      width: 100%;
+
+      max-width: 900px;
+
+      background: #000;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      border: 1px solid var(--border-gold);
+
+      box-shadow:
+        0 0 50px rgba(251,191,36,0.25);
+    }
+
+    .modal-close {
+      position: absolute;
+
+      top: 15px;
+      left: 15px;
+
+      z-index: 5;
+
+      width: 42px;
+      height: 42px;
+
+      border-radius: 50%;
+
+      border: none;
+
+      background: rgba(0,0,0,0.75);
+
+      color: white;
+
+      cursor: pointer;
+
+      font-size: 1.2rem;
+    }
+
+    .video-modal-body {
+      position: relative;
+
+      padding-top: 56.25%;
+    }
+
+    .video-modal-body iframe {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      border: none;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #040508;
+
+      border-top: 1px solid rgba(255,255,255,0.08);
+
+      padding: 40px 0;
+
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 1rem;
+    }
+
+    .footer-credits {
+      color: var(--text-gray);
+
+      font-size: 1rem;
+
+      font-weight: 600;
+    }
+
+    .footer-credits a {
+      color: var(--primary-gold);
+
+      text-decoration: none;
+
+      font-weight: 900;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 992px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 3rem;
+      }
+
+      .hero-content {
+        align-items: center;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+      }
+
+      .about-img-frame {
+        max-width: 350px;
+
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .nav-links {
+        position: fixed;
+
+        top: 80px;
+        right: -100%;
+
+        width: 100%;
+
+        height: calc(100vh - 80px);
+
+        background: rgba(7,8,12,0.98);
+
+        backdrop-filter: blur(20px);
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        transition: var(--transition);
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .songs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image-card {
+        max-width: 360px;
+      }
+
+      .artist-img {
+        height: 460px;
+      }
+
+      .logo-badge {
+        width: 85px;
+        height: 85px;
+
+        right: -10px;
+        bottom: -15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      .hero-title {
+        font-size: 2.1rem;
+      }
+
+      .hero-subtext {
+        font-size: 1.05rem;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .about-card {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background -->
+  <canvas id="lightningCanvas"></canvas>
+
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container nav-container">
+
+      <a href="#hero" class="brand-logo">
+
+        <img
+          src="logo.png"
+          alt="الرعد"
+          onerror="this.style.display='none'"
+        >
+
+        <div class="brand-text">
+
+          <span class="brand-title">
+            الرعد ⚡
+          </span>
+
+          <span class="brand-sub">
+            AHMED ELALMANY
+          </span>
+
+        </div>
+
+      </a>
+
+      <nav>
+
+        <ul class="nav-links" id="navLinks">
+
+          <li>
+            <a href="#hero" class="active">
+              الرئيسية
+            </a>
+          </li>
+
+          <li>
+            <a href="#songs">
+              أحدث الإصدارات
+            </a>
+          </li>
+
+          <li>
+            <a href="#about">
+              عن الرعد
+            </a>
+          </li>
+
+          <li>
+            <a href="#social">
+              تواصل معنا
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="فتح القائمة"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section id="hero" class="hero">
+
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div class="hero-content">
+
+          <div class="badge-tag">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <span>
+              الفنان الصاعد رسميًا
+            </span>
+
+          </div>
+
+          <h1 class="hero-title">
+
+            <span class="gold">
+              الرعد ⚡
+            </span>
+
+            <br>
+
+            <span class="blue">
+              AHMED ELALMANY
+            </span>
+
+          </h1>
+
+          <p class="hero-subtext">
+            من الدلنجات، البحيرة... إلى كل مكان ⚡
+          </p>
+
+          <p class="hero-description">
+            مرحباً بكم في الموقع الرسمي للفنان الشاب أحمد الألماني.
+            استمع لأحدث الإصدارات والأعمال الغنائية التي تعبر عن
+            هوية موسيقية فريدة ورؤية فنية صاعدة.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#songs"
+              class="btn btn-primary"
+            >
+              <i class="fa-solid fa-play"></i>
+              استمع الآن
+            </a>
+
+            <a
+              href="#songs"
+              class="btn btn-secondary"
+            >
+              <i class="fa-solid fa-compact-disc"></i>
+              أحدث الأعمال
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-image-wrapper">
+
+          <div class="hero-image-card">
+
+            <img
+              src="ahmed.png"
+              alt="أحمد الألماني - الرعد"
+              class="artist-img"
+            >
+
+            <div class="logo-badge">
+
+              <img
+                src="logo.png"
+                alt="الرعد"
+              >
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SONGS
+  ========================= -->
+
+  <section id="songs" class="section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-subtitle">
+          الموسيقى والإصدارات
+        </span>
+
+        <h2 class="section-title">
+          أحدث الأغاني والأعمال
+        </h2>
+
+        <div class="section-divider"></div>
+
+      </div>
+
+
+      <div class="search-box-wrapper">
+
+        <div class="search-box">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="ابحث عن اسم الأغنية أو الوصف..."
+          >
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="songs-grid"
+        id="songsContainer"
+      >
+
+        <div class="loading">
+
+          <i class="fa-solid fa-spinner fa-spin"></i>
+
+          جاري تحميل الأغاني...
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section id="about" class="section">
+
+    <div class="container">
+
+      <div class="about-card">
+
+        <div class="about-grid">
+
+          <div class="about-image-col">
+
+            <div class="about-img-frame">
+
+              <img
+                src="ahmed.png"
+                alt="أحمد الألماني"
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="about-content-col">
+
+            <div class="badge-tag">
+
+              <i class="fa-solid fa-user"></i>
+
+              السيرة الذاتية
+
+            </div>
+
+            <h2
+              class="section-title"
+              style="text-align:right;"
+            >
+              عن الرعد ⚡
+            </h2>
+
+            <p class="about-text">
+
+              «الرعد ⚡، الاسم الفني لأحمد الألماني،
+              فنان مصري شاب يبلغ من العمر 23 عامًا،
+              من مركز الدلنجات بمحافظة البحيرة.
+              يسعى لتقديم أعمال غنائية بطابع خاص
+              وبناء هوية فنية مميزة، والوصول بموسيقاه
+              إلى جمهور أكبر.»
+
+            </p>
+
+
+            <div class="stats-grid">
+
+              <div class="stat-item">
+
+                <span class="stat-value">
+                  23
+                </span>
+
+                <span class="stat-label">
+                  العمر
+                </span>
+
+              </div>
+
+
+              <div class="stat-item">
+
+                <span class="stat-value">
+                  الدلنجات
+                </span>
+
+                <span class="stat-label">
+                  محافظة البحيرة 🇪🇬
+                </span>
+
+              </div>
+
+
+              <div class="stat-item">
+
+                <span class="stat-value">
+                  الرعد ⚡
+                </span>
+
+                <span class="stat-label">
+                  اللقب الفني
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SOCIAL
+  ========================= -->
+
+  <section id="social" class="section">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <span class="section-subtitle">
+          تواصل واشتراك
+        </span>
+
+        <h2 class="section-title">
+          تابع الرعد ⚡ على المنصات
+        </h2>
+
+        <div class="section-divider"></div>
+
+      </div>
+
+
+      <div class="social-grid">
+
+        <a
+          href="https://www.tiktok.com/@ahmed_elalmany_official"
+          target="_blank"
+          rel="noopener"
+          class="social-card tiktok"
+        >
+
+          <i class="fa-brands fa-tiktok"></i>
+
+          <span class="platform">
+            TikTok
+          </span>
+
+          <span class="handle">
+            @ahmed_elalmany_official
+          </span>
+
+        </a>
+
+
+        <a
+          href="https://youtube.com/@ahmed_elalmany"
+          target="_blank"
+          rel="noopener"
+          class="social-card youtube"
+        >
+
+          <i class="fa-brands fa-youtube"></i>
+
+          <span class="platform">
+            YouTube
+          </span>
+
+          <span class="handle">
+            @ahmed_elalmany
+          </span>
+
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/ahmed_elalmany_official"
+          target="_blank"
+          rel="noopener"
+          class="social-card instagram"
+        >
+
+          <i class="fa-brands fa-instagram"></i>
+
+          <span class="platform">
+            Instagram
+          </span>
+
+          <span class="handle">
+            @ahmed_elalmany_official
+          </span>
+
+        </a>
+
+
+        <a
+          href="https://www.facebook.com/share/1NoYLz8QWJ/"
+          target="_blank"
+          rel="noopener"
+          class="social-card facebook"
+        >
+
+          <i class="fa-brands fa-facebook"></i>
+
+          <span class="platform">
+            Facebook
+          </span>
+
+          <span class="handle">
+            أحمد الألماني الرسمية
+          </span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div
+        class="brand-logo"
+        style="justify-content:center;"
+      >
+
+        <img
+          src="logo.png"
+          alt="الرعد"
+          style="width:36px;height:36px;"
+        >
+
+        <span class="brand-title">
+          الرعد ⚡ - AHMED ELALMANY
+        </span>
+
+      </div>
+
+      <p class="footer-credits">
+
+        © جميع الحقوق محفوظة |
+
+        تم التطوير بواسطة
+
+        <a
+          href="https://t.me/sayoda_elgadar"
+          target="_blank"
+          rel="noopener"
+        >
+          EL-SAYED HASAN
+        </a>
+
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       VIDEO MODAL
+  ========================= -->
+
+  <div
+    class="modal-overlay"
+    id="videoModal"
+  >
+
+    <div class="video-modal-card">
+
+      <button
+        class="modal-close"
+        id="closeVideoBtn"
+        aria-label="إغلاق"
+      >
+
+        <i class="fa-solid fa-xmark"></i>
+
+      </button>
+
+      <div
+        class="video-modal-body"
+        id="videoModalBody"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* ==========================================
+       DATA
+    ========================================== */
+
+    let songsData = [];
+
+
+    /* ==========================================
+       YOUTUBE ID
+    ========================================== */
+
+    function extractYouTubeId(url) {
+
+      if (!url) return null;
+
+      try {
+
+        const parsed = new URL(url);
+
+        if (
+          parsed.hostname.includes("youtube.com")
+        ) {
+
+          if (
+            parsed.pathname === "/watch"
+          ) {
+            return parsed.searchParams.get("v");
+          }
+
+          if (
+            parsed.pathname.startsWith("/shorts/")
+          ) {
+            return parsed.pathname.split("/")[2];
+          }
+
+          if (
+            parsed.pathname.startsWith("/embed/")
+          ) {
+            return parsed.pathname.split("/")[2];
+          }
+        }
+
+        if (
+          parsed.hostname === "youtu.be"
+        ) {
+          return parsed.pathname.substring(1);
+        }
+
+      } catch (error) {
+
+        console.warn(
+          "رابط YouTube غير صالح:",
+          url
+        );
+
+      }
+
+      return null;
+    }
+
+
+    /* ==========================================
+       LOAD SONGS.JSON
+    ========================================== */
+
+    async function loadSongs() {
+
+      const container =
+        document.getElementById(
+          "songsContainer"
+        );
+
+      try {
+
+        const response =
+          await fetch(
+            "songs.json?v=" + Date.now()
+          );
+
+        if (!response.ok) {
+          throw new Error(
+            "تعذر تحميل songs.json"
+          );
+        }
+
+        const data =
+          await response.json();
+
+        if (!Array.isArray(data)) {
+          throw new Error(
+            "صيغة songs.json غير صحيحة"
+          );
+        }
+
+        songsData = data;
+
+        renderSongs(songsData);
+
+      } catch (error) {
+
+        console.error(error);
+
+        container.innerHTML = `
+
+          <div class="no-results">
+
+            <i
+              class="fa-solid fa-triangle-exclamation fa-3x"
+              style="
+                color:var(--primary-gold);
+                margin-bottom:1rem;
+              "
+            ></i>
+
+            <p>
+              تعذر تحميل قائمة الأغاني.
+            </p>
+
+            <small
+              style="
+                display:block;
+                margin-top:10px;
+                color:#64748b;
+              "
+            >
+              تأكد أن ملف
+              <strong>songs.json</strong>
+              موجود بجانب index.html
+            </small>
+
+          </div>
+
+        `;
+
+      }
+
+    }
+
+
+    /* ==========================================
+       ESCAPE HTML
+    ========================================== */
+
+    function escapeHTML(value) {
+
+      if (value === null || value === undefined) {
+        return "";
+      }
+
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* ==========================================
+       RENDER SONGS
+    ========================================== */
+
+    function renderSongs(list) {
+
+      const container =
+        document.getElementById(
+          "songsContainer"
+        );
+
+      if (!list || list.length === 0) {
+
+        container.innerHTML = `
+
+          <div class="no-results">
+
+            <i
+              class="fa-solid fa-compact-disc fa-3x"
+              style="
+                color:var(--primary-gold);
+                margin-bottom:1rem;
+              "
+            ></i>
+
+            <p>
+              لم يتم العثور على أي أغاني.
+            </p>
+
+          </div>
+
+        `;
+
+        return;
+      }
+
+
+      const sorted = [...list].sort(
+        (a,b) =>
+          new Date(b.date || 0) -
+          new Date(a.date || 0)
+      );
+
+
+      container.innerHTML =
+        sorted.map(song => {
+
+          const videoId =
+            extractYouTubeId(
+              song.youtube
+            );
+
+          const title =
+            escapeHTML(
+              song.title ||
+              "أغنية بدون اسم"
+            );
+
+          const description =
+            escapeHTML(
+              song.description || ""
+            );
+
+          const date =
+            escapeHTML(
+              song.date || "جديد"
+            );
+
+          const cover =
+            escapeHTML(
+              song.cover ||
+              "ahmed.png"
+            );
+
+
+          return `
+
+            <article class="song-card">
+
+              <div class="song-cover-wrapper">
+
+                <span class="song-badge-date">
+                  ${date}
+                </span>
+
+                <img
+                  src="${cover}"
+                  alt="${title}"
+                  loading="lazy"
+                  onerror="
+                    this.onerror=null;
+                    this.src='ahmed.png';
+                  "
+                >
+
+              </div>
+
+
+              <div class="song-details">
+
+                <h3 class="song-title">
+                  ${title}
+                </h3>
+
+                <p class="song-description">
+                  ${description}
+                </p>
+
+
+                ${
+                  videoId
+                  ?
+
+                  `
+
+                  <div
+                    class="song-player-container"
+                  >
+
+                    <iframe
+                      src="https://www.youtube.com/embed/${encodeURIComponent(videoId)}"
+                      title="${title}"
+                      loading="lazy"
+                      allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share
+                      "
+                      allowfullscreen
+                    ></iframe>
+
+                  </div>
+
+                  <div class="song-actions">
+
+                    <button
+                      class="btn-watch"
+                      data-video-id="${escapeHTML(videoId)}"
+                    >
+
+                      <i
+                        class="fa-solid fa-expand"
+                      ></i>
+
+                      تشغيل الشاشة الكاملة
+
+                    </button>
+
+                  </div>
+
+                  `
+
+                  :
+
+                  `
+
+                  <div
+                    style="
+                      padding:15px;
+                      text-align:center;
+                      border-radius:12px;
+                      background:rgba(255,255,255,0.03);
+                      color:var(--text-gray);
+                    "
+                  >
+
+                    <i class="fa-solid fa-link"></i>
+
+                    رابط الفيديو غير صالح
+
+                  </div>
+
+                  `
+
+                }
+
+              </div>
+
+            </article>
+
+          `;
+
+        }).join("");
+
+    }
+
+
+    /* ==========================================
+       SEARCH
+    ========================================== */
+
+    const searchInput =
+      document.getElementById(
+        "searchInput"
+      );
+
+
+    searchInput.addEventListener(
+      "input",
+      function() {
+
+        const query =
+          this.value
+            .trim()
+            .toLowerCase();
+
+        if (!query) {
+
+          renderSongs(songsData);
+
+          return;
+        }
+
+
+        const filtered =
+          songsData.filter(song => {
+
+            const title =
+              String(
+                song.title || ""
+              ).toLowerCase();
+
+            const description =
+              String(
+                song.description || ""
+              ).toLowerCase();
+
+            return (
+              title.includes(query) ||
+              description.includes(query)
+            );
+
+          });
+
+
+        renderSongs(filtered);
+
+      }
+    );
+
+
+    /* ==========================================
+       VIDEO MODAL
+    ========================================== */
+
+    const videoModal =
+      document.getElementById(
+        "videoModal"
+      );
+
+    const videoModalBody =
+      document.getElementById(
+        "videoModalBody"
+      );
+
+
+    function openVideoModal(videoId) {
+
+      if (!videoId) return;
+
+      videoModalBody.innerHTML = `
+
+        <iframe
+          src="https://www.youtube.com/embed/${encodeURIComponent(videoId)}?autoplay=1"
+          title="YouTube Video"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share
+          "
+          allowfullscreen
+        ></iframe>
+
+      `;
+
+      videoModal.classList.add(
+        "active"
+      );
+
+      document.body.style.overflow =
+        "hidden";
+    }
+
+
+    function closeVideoModal() {
+
+      videoModalBody.innerHTML = "";
+
+      videoModal.classList.remove(
+        "active"
+      );
+
+      document.body.style.overflow =
+        "";
+    }
+
+
+    document.addEventListener(
+      "click",
+      function(event) {
+
+        const button =
+          event.target.closest(
+            ".btn-watch"
+          );
+
+        if (!button) return;
+
+        const videoId =
+          button.dataset.videoId;
+
+        openVideoModal(videoId);
+
+      }
+    );
+
+
+    document.getElementById(
+      "closeVideoBtn"
+    ).addEventListener(
+      "click",
+      closeVideoModal
+    );
+
+
+    videoModal.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          event.target ===
+          videoModal
+        ) {
+          closeVideoModal();
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+          closeVideoModal();
+        }
+
+      }
+    );
+
+
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
+
+    const menuToggle =
+      document.getElementById(
+        "menuToggle"
+      );
+
+    const navLinks =
+      document.getElementById(
+        "navLinks"
+      );
+
+
+    menuToggle.addEventListener(
+      "click",
+      function() {
+
+        navLinks.classList.toggle(
+          "active"
+        );
+
+      }
+    );
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            navLinks.classList.remove(
+              "active"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* ==========================================
+       ACTIVE NAV
+    ========================================== */
+
+    const sections =
+      document.querySelectorAll(
+        "section[id]"
+      );
+
+    const navItems =
+      document.querySelectorAll(
+        ".nav-links a"
+      );
+
+
+    window.addEventListener(
+      "scroll",
+      function() {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+          const sectionTop =
+            section.offsetTop - 150;
+
+          if (
+            window.scrollY >=
+            sectionTop
+          ) {
+            current =
+              section.getAttribute(
+                "id"
+              );
+          }
+
+        });
+
+
+        navItems.forEach(link => {
+
+          link.classList.remove(
+            "active"
+          );
+
+          if (
+            link.getAttribute(
+              "href"
+            ) === "#" + current
+          ) {
+
+            link.classList.add(
+              "active"
+            );
+
+          }
+
+        });
+
+      }
+    );
+
+
+    /* ==========================================
+       LIGHTNING EFFECT
+    ========================================== */
+
+    const canvas =
+      document.getElementById(
+        "lightningCanvas"
+      );
+
+    const ctx =
+      canvas.getContext("2d");
+
+    let bolts = [];
+
+
+    function resizeCanvas() {
+
+      canvas.width =
+        window.innerWidth;
+
+      canvas.height =
+        window.innerHeight;
+
+    }
+
+
+    window.addEventListener(
+      "resize",
+      resizeCanvas
+    );
+
+    resizeCanvas();
+
+
+    class Lightning {
+
+      constructor() {
+        this.reset();
+      }
+
+
+      reset() {
+
+        this.x =
+          Math.random() *
+          canvas.width;
+
+        this.y = 0;
+
+        this.path = [
+          {
+            x: this.x,
+            y: this.y
+          }
+        ];
+
+        this.maxSegments =
+          15 +
+          Math.random() * 15;
+
+        this.life = 0;
+
+        this.maxLife =
+          10 +
+          Math.random() * 20;
+
+        this.alpha = 1;
+
+      }
+
+
+      update() {
+
+        if (
+          this.path.length <
+          this.maxSegments
+        ) {
+
+          const last =
+            this.path[
+              this.path.length - 1
+            ];
+
+          const nextX =
+            last.x +
+            (Math.random() - 0.5) *
+            40;
+
+          const nextY =
+            last.y +
+            canvas.height /
+            this.maxSegments;
+
+          this.path.push({
+            x: nextX,
+            y: nextY
+          });
+
+        }
+
+        this.life++;
+
+        this.alpha =
+          1 -
+          this.life /
+          this.maxLife;
+
+      }
+
+
+      draw() {
+
+        if (
+          this.alpha <= 0 ||
+          this.path.length < 2
+        ) {
+          return;
+        }
+
+        ctx.beginPath();
+
+        ctx.moveTo(
+          this.path[0].x,
+          this.path[0].y
+        );
+
+
+        for (
+          let i = 1;
+          i < this.path.length;
+          i++
+        ) {
+
+          ctx.lineTo(
+            this.path[i].x,
+            this.path[i].y
+          );
+
+        }
+
+
+        ctx.strokeStyle =
+          `rgba(251,191,36,${this.alpha * 0.7})`;
+
+        ctx.lineWidth = 2;
+
+        ctx.shadowBlur = 15;
+
+        ctx.shadowColor =
+          "#fbbf24";
+
+        ctx.stroke();
+
+      }
+
+    }
+
+
+    function animateLightning() {
+
+      ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+
+
+      if (
+        Math.random() < 0.03 &&
+        bolts.length < 3
+      ) {
+
+        bolts.push(
+          new Lightning()
+        );
+
+      }
+
+
+      bolts.forEach(
+        (bolt, index) => {
+
+          bolt.update();
+
+          bolt.draw();
+
+          if (
+            bolt.life >=
+            bolt.maxLife
+          ) {
+
+            bolts.splice(
+              index,
+              1
+            );
+
+          }
+
+        }
+      );
+
+
+      requestAnimationFrame(
+        animateLightning
+      );
+
+    }
+
+
+    /* ==========================================
+       START
+    ========================================== */
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function() {
+
+        loadSongs();
+
+        animateLightning();
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
