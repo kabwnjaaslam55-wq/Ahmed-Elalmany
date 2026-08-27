@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kabwnjaaslam55-wq.github.io/Ahmed-Elalmany/sitemap.xml
